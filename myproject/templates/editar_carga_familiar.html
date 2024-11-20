@@ -1,3 +1,4 @@
+
 <!-- editar_carga_familiar.html -->
 {% extends 'base.html' %}
 
@@ -5,9 +6,22 @@
 <h2>Editar Carga Familiar</h2>
 <form method="post">
     {% csrf_token %}
-    {{ form.as_p }}
+    <div class="form-group">
+        <label for="nombre">Nombre:</label>
+        {{ form.nombre }}
+    </div>
+    <div class="form-group">
+        <label for="parentesco">Parentesco:</label>
+        {{ form.parentesco }}
+    </div>
+    <div class="form-group">
+        <label for="telefono">Teléfono:</label>
+        {{ form.telefono }}
+    </div>
+    <div class="form-group">
+        <label for="direccion">Dirección:</label>
+        {{ form.direccion }}
+    </div>
     <button type="submit" class="btn btn-primary">Guardar cambios</button>
 </form>
 {% endblock %}
-
-
